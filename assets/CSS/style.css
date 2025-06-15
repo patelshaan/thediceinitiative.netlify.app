@@ -1,14 +1,87 @@
+/* Fonts */
 body {
-	font-family: Calibri, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #041B34;
-	text-align: center;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-html, body {
-	height: 100%;
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #40547C;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  background: #40547C;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.hero {
+  background-color: #68B4F4;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background-color: #FF9C04;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #A0CCFC;
+  color: #40547C;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  border: 2px solid #40547C;
+  padding: 1.5rem;
+  width: 250px;
+  background-color: #F5F9FF;
+}
+
+footer {
+  background-color: #40547C;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
 }
