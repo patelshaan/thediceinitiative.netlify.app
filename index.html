@@ -4,51 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The DICE Initiative</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <div class="nav-container">
-        <div class="logo"><a href="index.html">DICE</a></div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#get-involved">Get Involved</a></li>
-          <li><a href="sponsorships.html">Sponsorships</a></li>
-          <li><a href="team.html">Meet the Team</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+    <nav class="nav-container">
+      <div class="logo"><a href="#home">DICE</a></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#get-involved">Get Involved</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero" id="home" data-aos="fade-up">
+  <section class="hero" id="home">
     <h1>The DICE Initiative</h1>
-    <p>Helping local nonprofits through youth-led collaborative efforts</p>
+    <p>Supporting local nonprofits through student-driven efforts</p>
     <a class="btn primary" href="#get-involved">Get Involved</a>
   </section>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about">
     <h2>About Us</h2>
     <p>DICE connects students with local nonprofits to build real-world skills and make a real-world impact.</p>
+    <a class="btn secondary" href="#">Learn More</a>
   </section>
 
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-    <p>Check out some of our previous and current initiatives supporting the community.</p>
-  </section>
-
-  <section id="get-involved" data-aos="fade-up">
-    <h2>Get Involved</h2>
-    <p>Join us in making a difference—volunteer, lead, or collaborate on a project.</p>
-    <a class="btn secondary" href="contact.html">Contact Us</a>
-  </section>
-
-  <section id="values" data-aos="fade-up">
+  <section id="values">
     <h2>Our Values</h2>
     <div class="values-grid">
       <div class="value-card">Community Involvement</div>
@@ -57,13 +45,25 @@
     </div>
   </section>
 
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Your summary here...</p>
+    <a class="btn secondary" href="#">View Projects</a>
+  </section>
+
+  <section id="get-involved">
+    <h2>Get Involved</h2>
+    <p>Your call to action here...</p>
+    <a class="btn primary" href="#">Join Us</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email us at: <a href="mailto:hello@diceinitiative.org">hello@diceinitiative.org</a></p>
+  </section>
+
   <footer>
     <p>&copy; 2025 The DICE Initiative</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
