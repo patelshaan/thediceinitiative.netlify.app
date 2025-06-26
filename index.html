@@ -2,93 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The DICE Initiative</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #F7FAFC;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-color: #40547C;
-      padding: 1rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .section h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #68B4F4;
-      margin-bottom: 1rem;
-    }
-    .section p {
-      font-size: 1.1rem;
-    }
-    .image-placeholder {
-      width: 100%;
-      height: 200px;
-      background-color: #A0CCFC;
-      margin: 2rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    .sponsors {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .sponsor-logo {
-      width: 120px;
-      height: 60px;
-      background-color: #ddd;
-    }
-    footer {
-      background-color: #40547C;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
+    <nav class="nav-container">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -114,7 +45,7 @@
   <section class="section" data-aos="fade-left">
     <h2>Our Model</h2>
     <p>DICE members form marketing, software development, and business management teams. Each team partners with an organization they have the skillset to help and are interested in. Teams complete projects during the school year and present their work at a celebratory springtime gala.</p>
-    <div class="image-placeholder">[PHOTO HERE]</div>
+    <div class="image-placeholder">[TEAM PHOTO HERE]</div>
     <p>Students love DICE because they get to see the impact of their hard work in real time. Many teammates become lifelong coworkers and friends and some teams are still in touch with their partner organization to this day!</p>
   </section>
 
@@ -124,27 +55,23 @@
   </section>
 
   <section class="section" data-aos="fade-up">
-    <h2>Thank you, sponsors!</h2>
-    <p>DICE is grateful to the following organizations for sponsoring our 2024-2025 season:</p>
+    <h2>Partner With Us</h2>
+    <p>DICE is currently seeking sponsorships to support our 2024–25 season. Interested in supporting youth-led innovation? Get in touch with us below.</p>
     <div class="sponsors">
-      <div class="sponsor-logo">[Logo]</div>
-      <div class="sponsor-logo">[Logo]</div>
-      <div class="sponsor-logo">[Logo]</div>
+      <div class="sponsor-logo">[Your Logo Here]</div>
+      <div class="sponsor-logo">[Your Logo Here]</div>
+      <div class="sponsor-logo">[Your Logo Here]</div>
     </div>
   </section>
 
   <footer>
-    <p>The DICE Initiative.</p>
+    <p>&copy; 2025 The DICE Initiative. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- AOS Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: 'ease-in-out'
-    });
+    AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });
   </script>
 </body>
 </html>
