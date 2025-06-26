@@ -3,45 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sponsorships | The DICE Initiative</title>
+  <title>Sponsorships – The DICE Initiative</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <div class="nav-container">
-        <div class="logo"><a href="index.html">DICE</a></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="sponsorships.html">Sponsorships</a></li>
-          <li><a href="team.html">Meet the Team</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="page-hero" data-aos="fade-in">
-    <h1>About Us</h1>
-  </section>
-
-  <section class="page-content" data-aos="fade-up">
-    <p>[Insert content here...]</p>
+  <section class="section" data-aos="fade-up">
+    <h2>Become a Sponsor</h2>
+    <p>The DICE Initiative is looking for mission-aligned partners and sponsors to help us empower high school students through real-world business experience.</p>
+    <p>We are a student-led organization offering marketing, software, and business development services to local nonprofits and businesses — all while helping members sharpen professional and leadership skills.</p>
+    <div class="image-placeholder">[FUTURE SPONSOR LOGO SPACE]</div>
+    <p>As a sponsor, you’ll be contributing directly to student-driven innovation in the Greater Houston community. Sponsorships help fund tools, events, workshops, and project support.</p>
+    <p>To learn more about sponsoring DICE, please <a href="contact.html">contact us</a> or email us directly at <a href="mailto:hello@diceinitiative.org">hello@diceinitiative.org</a>.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 The DICE Initiative</p>
+    <p>&copy; 2025 The DICE Initiative. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- AOS Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });
   </script>
 </body>
 </html>
