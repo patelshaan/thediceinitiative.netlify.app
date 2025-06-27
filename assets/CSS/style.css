@@ -28,7 +28,9 @@ nav {
 header {
   background-color: #40547C;
   padding: 1rem 0;
-@@ -18,17 +34,32 @@ header {
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +63,11 @@ header {
   text-decoration: none;
   font-weight: 600;
 }
-@@ -40,10 +71,13 @@ header {
+
+.logo a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #68B4F4;
   text-decoration: none;
 }
 
@@ -75,7 +81,9 @@ header {
   padding: 100px 20px;
 }
 
-@@ -53,48 +87,85 @@ header {
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
 }
 
 .btn {
@@ -93,12 +101,6 @@ header {
 }
 
 .btn.primary {
-  background-color: #FF9C04;
-  color: white;
-}
-
-.btn.secondary {
-  background-color: #A0CCFC;
 @@ -83,55 +71,30 @@ nav {
   color: #40547C;
 }
@@ -162,7 +164,7 @@ footer {
   }
 
   .nav-container {
-    flex-direction: column;Add commentMore actionsAdd commentMore actions
+    flex-direction: column;Add commentMore actions
     align-items: center;
   }
   padding: 20px 0;
