@@ -13,7 +13,7 @@ body {
 
 h1, h2 {
   font-family: 'Poppins', sans-serif;
-  color: #40547C;
+  color: #A0CCFC;
 }
 
 a {
@@ -23,7 +23,7 @@ a {
 
 /* ==== Navbar Styling ==== */
 nav {
-  background: #40547C;
+  background: #68B4F4;
   padding: 1rem;
 header {
   background-color: #40547C;
