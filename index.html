@@ -11,6 +11,9 @@
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
@@ -22,23 +25,6 @@
       background-color: #F7FAFC;
       color: #333;
       scroll-behavior: smooth;
-    }
-    header {
-      background-color: #40547C;
-      padding: 1rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
     }
     .section {
       padding: 4rem 2rem;
@@ -82,18 +68,97 @@
       text-align: center;
       padding: 1rem;
     }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #68B4F4;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-menu a {
+      color: #40547C;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-menu a:hover {
+      background-color: #A0CCFC;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <header class="bg-[#68B4F4] text-[#40547C] sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold font-['Poppins']">
+        <a href="index.html">DICE Initiative</a>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul id="nav-menu" class="hidden md:flex md:items-center md:gap-6">
+        <li><a href="index.html" class="hover:text-[#A0CCFC] font-medium">Home</a></li>
+        <li class="relative dropdown group">
+          <a href="projects.html" class="hover:text-[#A0CCFC] font-medium flex items-center">
+            Projects
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="dropdown-menu hidden group-hover:block">
+            <a href="projects.html#showcase">Project Showcase</a>
+            <a href="projects.html#past">Past Projects</a>
+          </div>
+        </li>
+        <li class="relative dropdown group">
+          <a href="get-involved.html" class="hover:text-[#A0CCFC] font-medium flex items-center">
+            Get Involved
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="dropdown-menu hidden group-hover:block">
+            <a href="get-involved.html#membership">Join as a Member</a>
+            <a href="get-involved.html#sponsor">Become a Sponsor</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="hover:text-[#A0CCFC] font-medium">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#68B4F4] text-[#40547C]">
+      <ul class="flex flex-col p-4">
+        <li><a href="index.html" class="block py-2 hover:text-[#A0CCFC]">Home</a></li>
+        <li>
+          <a href="projects.html" class="block py-2 hover:text-[#A0CCFC]">Projects</a>
+          <ul class="pl-4">
+            <li><a href="projects.html#showcase" class="block py-2 hover:text-[#A0CCFC]">Project Showcase</a></li>
+            <li><a href="projects.html#past" class="block py-2 hover:text-[#A0CCFC]">Past Projects</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="get-involved.html" class="block py-2 hover:text-[#A0CCFC]">Get Involved</a>
+          <ul class="pl-4">
+            <li><a href="get-involved.html#membership" class="block py-2 hover:text-[#A0CCFC]">Join as a Member</a></li>
+            <li><a href="get-involved.html#sponsor" class="block py-2 hover:text-[#A0CCFC]">Become a Sponsor</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="block py-2 hover:text-[#A0CCFC]">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
   <section class="section" data-aos="fade-up">
@@ -144,6 +209,13 @@
       once: true,
       duration: 800,
       easing: 'ease-in-out'
+    });
+
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
   </script>
 </body>
