@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The DICE Initiative is College Park High School's entrepreneurship club, connecting students with local businesses for real-world projects.">
+  <meta name="keywords" content="DICE Initiative, entrepreneurship, College Park High School, Houston, community service, student projects">
+  <meta property="og:title" content="The DICE Initiative">
+  <meta property="og:description" content="Empowering high school students through entrepreneurship and community service in Houston.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
   <title>The DICE Initiative</title>
 
   <!-- Fonts -->
@@ -117,6 +123,12 @@
     .dropdown-menu a:hover {
       background-color: #A0CCFC;
     }
+    #mobile-menu ul.pl-4 {
+      padding-left: 1.5rem;
+    }
+    #mobile-menu li a {
+      padding: 0.75rem 0;
+    }
   </style>
 </head>
 <body>
@@ -129,7 +141,7 @@
 
       <!-- Hamburger Menu for Mobile -->
       <div class="md:hidden">
-        <button id="menu-toggle" class="focus:outline-none">
+        <button id="menu-toggle" aria-label="Toggle navigation menu" class="focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -159,8 +171,7 @@
             </svg>
           </a>
           <div class="dropdown-menu hidden group-hover:block">
-            <a href="get-involved.html#membership">Join as a Member</a>
-            <a href="get-involved.html#sponsor">Become a Sponsor</a>
+            <a href="get-involved.html#membership">Membership</a>
           </div>
         </li>
         <li><a href="contact.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto']">Contact</a></li>
@@ -181,8 +192,7 @@
         <li>
           <a href="get-involved.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Get Involved</a>
           <ul class="pl-4">
-            <li><a href="get-involved.html#membership" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Join as a Member</a></li>
-            <li><a href="get-involved.html#sponsor" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Become a Sponsor</a></li>
+            <li><a href="get-involved.html#membership" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Membership</a></li>
           </ul>
         </li>
         <li><a href="contact.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Contact</a></li>
@@ -255,14 +265,24 @@
     AOS.init({
       once: true,
       duration: 800,
-      easing: 'ease-in-out'
+      easing: 'ease-in-out',
+      offset: 100
     });
 
     // Toggle mobile menu
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const isExpanded = !mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   </script>
 </body>
