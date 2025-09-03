@@ -1,0 +1,249 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - The DICE Initiative</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #F7FAFC;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: #68B4F4;
+      margin-bottom: 1rem;
+    }
+    .section h3 {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #40547C;
+      margin-bottom: 0.5rem;
+    }
+    .section p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #A0CCFC;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .sponsor-logo {
+      width: 120px;
+      height: 60px;
+      background-color: #ddd;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .value-item {
+      background-color: #A0CCFC;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .value-item h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: #40547C;
+    }
+    .value-item p {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #333;
+    }
+    footer {
+      background-color: #40547C;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #68B4F4;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-menu a {
+      color: #40547C;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+    }
+    .dropdown-menu a:hover {
+      background-color: #A0CCFC;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #A0CCFC;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+    }
+    form button {
+      background-color: #68B4F4;
+      color: #40547C;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+    }
+    form button:hover {
+      background-color: #A0CCFC;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-[#68B4F4] text-[#40547C] sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold font-['Poppins']">
+        <a href="index.html">DICE Initiative</a>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul id="nav-menu" class="hidden md:flex md:items-center md:gap-6">
+        <li><a href="index.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto']">Home</a></li>
+        <li class="relative dropdown group">
+          <a href="projects.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto'] flex items-center">
+            Projects
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="dropdown-menu hidden group-hover:block">
+            <a href="projects.html#showcase">Project Showcase</a>
+            <a href="projects.html#past">Past Projects</a>
+          </div>
+        </li>
+        <li class="relative dropdown group">
+          <a href="get-involved.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto'] flex items-center">
+            Get Involved
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="dropdown-menu hidden group-hover:block">
+            <a href="get-involved.html#membership">Membership</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto']">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#68B4F4] text-[#40547C]">
+      <ul class="flex flex-col p-4">
+        <li><a href="index.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Home</a></li>
+        <li>
+          <a href="projects.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Projects</a>
+          <ul class="pl-4">
+            <li><a href="projects.html#showcase" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Project Showcase</a></li>
+            <li><a href="projects.html#past" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Past Projects</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="get-involved.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Get Involved</a>
+          <ul class="pl-4">
+            <li><a href="get-involved.html#membership" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Membership</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Get in touch with The DICE Initiative. Fill out the form below, and we'll respond as soon as possible.</p>
+    <form action="mailto:patelshaan9898@gmail.com" method="post" enctype="text/plain">
+      <label for="email">Your Email Address:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Enter your message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>The DICE Initiative.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-in-out'
+    });
+
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
