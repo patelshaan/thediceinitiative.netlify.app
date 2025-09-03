@@ -2,57 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – The DICE Initiative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The DICE Initiative</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
-  <!-- AOS Animation -->
+  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Stylesheet -->
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #F7FAFC;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: #68B4F4;
+      margin-bottom: 1rem;
+    }
+    .section h3 {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #40547C;
+      margin-bottom: 0.5rem;
+    }
+    .section p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #A0CCFC;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .sponsor-logo {
+      width: 120px;
+      height: 60px;
+      background-color: #ddd;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .value-item {
+      background-color: #A0CCFC;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .value-item h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: #40547C;
+    }
+    .value-item p {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #333;
+    }
+    footer {
+      background-color: #40547C;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #68B4F4;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-menu a {
+      color: #40547C;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+    }
+    .dropdown-menu a:hover {
+      background-color: #A0CCFC;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="nav-container">
-      <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <header class="bg-[#68B4F4] text-[#40547C] sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold font-['Poppins']">
+        <a href="index.html">DICE Initiative</a>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul id="nav-menu" class="hidden md:flex md:items-center md:gap-6">
+        <li><a href="index.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto']">Home</a></li>
+        <li class="relative dropdown group">
+          <a href="projects.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto'] flex items-center">
+            Projects
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="dropdown-menu hidden group-hover:block">
+            <a href="projects.html#showcase">Project Showcase</a>
+            <a href="projects.html#past">Past Projects</a>
+          </div>
+        </li>
+        <li class="relative dropdown group">
+          <a href="get-involved.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto'] flex items-center">
+            Get Involved
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="#40547C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="dropdown-menu hidden group-hover:block">
+            <a href="get-involved.html#membership">Join as a Member</a>
+            <a href="get-involved.html#sponsor">Become a Sponsor</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="hover:text-[#A0CCFC] font-medium font-['Roboto']">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#68B4F4] text-[#40547C]">
+      <ul class="flex flex-col p-4">
+        <li><a href="index.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Home</a></li>
+        <li>
+          <a href="projects.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Projects</a>
+          <ul class="pl-4">
+            <li><a href="projects.html#showcase" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Project Showcase</a></li>
+            <li><a href="projects.html#past" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Past Projects</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="get-involved.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Get Involved</a>
+          <ul class="pl-4">
+            <li><a href="get-involved.html#membership" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Join as a Member</a></li>
+            <li><a href="get-involved.html#sponsor" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Become a Sponsor</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="block py-2 hover:text-[#A0CCFC] font-['Roboto']">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
   <section class="section" data-aos="fade-up">
-    <h2>About DICE</h2>
-    <p>The DICE Initiative is powered by MIT LaunchX and based at College Park High School. Since our founding in 2017, we’ve evolved from a startup competition incubator to a thriving service-based entrepreneurship club.</p>
-    <div class="image-placeholder">[Photo of early DICE event or logo]</div>
-    <p>Originally, DICE prepared teams for the Diamond Challenge, encouraging hypothetical business proposals and competitive pitching. But when the COVID-19 pandemic hit, it changed how our student leaders saw the community around them.</p>
-    <p>Instead of competing with imaginary businesses, our members began solving real problems for real organizations. That spirit of service has carried DICE into a new mission: to help students apply entrepreneurial skills while uplifting the Greater Houston area’s small businesses and nonprofits.</p>
+    <h2>Service, redefined.</h2>
+    <p>The DICE Initiative is College Park High School's premier entrepreneurship club. We work closely with our community to bring fresh talent to the Greater Houston business scene.</p>
+    <div class="image-placeholder">[PHOTO HERE]</div>
+    <p>DICE connects high school students with local businesses to complete service projects in the fields of marketing, software development, and business management. Members sharpen their own skills through real-world experience while selflessly serving small businesses and nonprofit organizations. This personal hometown connection drives the quality of the work we complete today.</p>
+    <p>Since 2020, DICE has partnered with and completed projects for nearly three dozen organizations. Our mission is simple: help students develop both the acute skillset and altruistic drive necessary to succeed in the modern entrepreneurial age.</p>
   </section>
 
   <section class="section" data-aos="fade-right">
-    <h2>Our Purpose</h2>
-    <p>DICE gives students a purpose. Every year, our members join teams that work directly with local clients — nonprofits, small businesses, or social entrepreneurs. Whether they’re helping develop websites, run social media campaigns, or improve operations, students gain first-hand experience and soft skills.</p>
-    <p>Our teams are led by experienced peers — category leads — who help members navigate both technical and interpersonal aspects of client work. Everything is student-led, from the project management to the design choices.</p>
+    <h2>Our Values</h2>
+    <div class="values-grid">
+      <div class="value-item">
+        <h3>Community Involvement</h3>
+        <p>We foster strong ties with the Greater Houston community, partnering with local businesses and nonprofits to create meaningful impact through service projects.</p>
+      </div>
+      <div class="value-item">
+        <h3>Collaborative Effort</h3>
+        <p>Our teams work together, combining diverse skills and perspectives to deliver innovative solutions and build lasting relationships.</p>
+      </div>
+      <div class="value-item">
+        <h3>Career-Applicable Skills</h3>
+        <p>DICE equips students with practical, real-world experience in marketing, software development, and business management to prepare them for future success.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-left">
+    <h2>About DICE</h2>
+    <p>The DICE Initiative is powered by MIT LaunchX.</p>
+    <p>From 2017 to 2020, DICE acted as an incubator, preparing teams to enter hypothetical business models into the University of Delaware’s annual Diamond Challenge. However, the adverse effects of the COVID-19 pandemic on local businesses inspired our board to rewire DICE into a community service organization. Members are now able to sharpen their own skills through real-world experience while selflessly serving small businesses and nonprofit organizations.</p>
+    <p><a href="projects.html">View our project showcase here.</a></p>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Our Model</h2>
+    <p>DICE members form marketing, software development, and business management teams. Each team partners with an organization they have the skillset to help and are interested in. Teams complete projects during the school year and present their work at a celebratory springtime gala.</p>
+    <div class="image-placeholder">[PHOTO HERE]</div>
+    <p>Students love DICE because they get to see the impact of their hard work in real time. Many teammates become lifelong coworkers and friends and some teams are still in touch with their partner organization to this day!</p>
   </section>
 
   <section class="section" data-aos="zoom-in">
-    <h2>Looking Ahead</h2>
-    <p>With dozens of projects completed since 2020, we’re focused on scaling our impact while preserving the tight-knit collaboration that sets DICE apart. We aim to expand our reach, welcome new partners, and help our members discover the joy of creating meaningful change.</p>
-    <p>Want to know more? <a href="contact.html">Get in touch with us</a> or visit our <a href="projects.html">project showcase</a>.</p>
+    <h2>Behind the Scenes</h2>
+    <p>DICE is an entirely student-led organization. Our VP of Marketing leads promotion and member recruitment throughout the year, our VPs of Outreach spend their summers meeting with prospective sponsors, speakers, and partner organizations, and all of our VPs maintain supportive administrative positions. Our Category Leads work closely with DICE teams during the school year, meeting with each of their teams weekly and providing invaluable advice, instruction, and insight. The President oversees all projects and handles all administrative work.</p>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Thank you, sponsors!</h2>
+    <p>DICE is grateful to the following organizations for sponsoring our 2024-2025 season:</p>
+    <div class="sponsors">
+      <div class="sponsor-logo">[Logo]</div>
+      <div class="sponsor-logo">[Logo]</div>
+      <div class="sponsor-logo">[Logo]</div>
+    </div>
   </section>
 
   <footer>
+    <p>The DICE Initiative.</p>
   </footer>
 
-  <!-- AOS Scripts -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true, duration: 900, easing: 'ease-in-out' });
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-in-out'
+    });
+
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
