@@ -214,15 +214,13 @@
   <section class="section" data-aos="fade-up">
     <h2>Contact Us</h2>
     <p>Get in touch with The DICE Initiative. Fill out the form below, and we'll respond as soon as possible.</p>
-    <form action="mailto:patelshaan9898@gmail.com" method="post" enctype="text/plain">
-      <label for="email">Your Email Address:</label>
-      <input type="email" id="email" name="email" required placeholder="Enter your email">
-
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="6" required placeholder="Enter your message"></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+   <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="dcb83967-78cb-4003-96d9-e90723974ed0">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
   </section>
 
   <footer>
