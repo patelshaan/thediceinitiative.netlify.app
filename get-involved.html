@@ -175,6 +175,31 @@
     .links-list li {
       margin-bottom: 1rem;
     }
+    .resource-links {
+      padding-left: 0;
+      list-style: none;
+    }
+    .resource-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 240px;
+      min-height: 44px;
+      padding: 0.65rem 1rem;
+      border: 1px solid #40547C;
+      border-radius: 8px;
+      background-color: #40547C;
+      color: #fff;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .resource-button:hover,
+    .resource-button:focus-visible {
+      background-color: #A0CCFC;
+      color: #40547C;
+    }
     a.color{
       a:link {
     color: blue;
@@ -266,11 +291,11 @@
     <p>To become a member, you must attend College Park High School.</p>
      <img src="https://github.com/patelshaan/thediceinitiative.netlify.app/blob/main/IMG_4810.jpg?raw=true" alt="DICE 24-25 Members" style="padding-bottom: 20px;">
     <h3>Member Resources</h3>
-    <ul class="links-list">
+    <ul class="links-list resource-links">
       <p>Member Info Links:</p>
-      <li><a href="http://tiny.conroeisd.net/q8gdH">Pay Dues</a></li>
-      <li><a href="https://docs.google.com/document/d/118A18hqfsdpJv1vqWgNXD2Skuy6ISuOheqUPkSmtnBI/edit?usp=sharing" class="color">Organization List</a></li>
-      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdkm_l8MEHxerqqWO8NIaRBOK2AhizIVEkCdCsZ6iYZR0XYiA/viewform?usp=dialog">Submit Volunteer Hours</a></li>
+      <li><a href="http://tiny.conroeisd.net/q8gdH" class="resource-button">Pay Dues</a></li>
+      <li><a href="https://docs.google.com/document/d/118A18hqfsdpJv1vqWgNXD2Skuy6ISuOheqUPkSmtnBI/edit?usp=sharing" class="resource-button">Organization List</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdkm_l8MEHxerqqWO8NIaRBOK2AhizIVEkCdCsZ6iYZR0XYiA/viewform?usp=dialog" class="resource-button">Submit Volunteer Hours</a></li>
       <!-- more links aswe need -->
     </ul>
   </section>
