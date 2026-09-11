@@ -4,7 +4,7 @@
   z-index: 50;
   width: 100%;
   background-color: #68B4F4;
-  color: #40547C;
+  color: #2F3640;
 }
 
 .site-header-inner {
@@ -18,7 +18,7 @@
 }
 
 .site-brand {
-  color: #40547C;
+  color: #2F3640;
   font-family: 'Poppins', sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
@@ -36,7 +36,7 @@
 
 .site-navigation a,
 .site-dropdown-toggle {
-  color: #40547C;
+  color: #2F3640;
 }
 
 .site-navigation a:hover,
@@ -88,7 +88,7 @@
 
 .site-dropdown-menu a {
   padding: 0.65rem 0.75rem;
-  color: #40547C;
+  color: #2F3640;
 }
 
 .site-dropdown-menu a:hover,
@@ -102,7 +102,7 @@
   padding: 0.5rem;
   border: 0;
   background: transparent;
-  color: #40547C;
+  color: #2F3640;
   cursor: pointer;
 }
 
