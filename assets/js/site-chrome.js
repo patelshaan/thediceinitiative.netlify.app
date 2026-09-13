@@ -11,8 +11,8 @@ const siteHeader = `
           <button class="site-dropdown-toggle" type="button" aria-expanded="false">Get Involved</button>
           <div class="site-dropdown-menu">
             <a href="get-involved.html#membership">Membership</a>
-            <a href="get-involved.html#organizations">Organizations</a>
-            <a href="get-involved.html#sponsors">Sponsors</a>
+            <a href="partners.html">Partners</a>
+            <a href="sponsorships.html">Sponsors</a>
           </div>
         </div>
         <a href="contact-us.html">Contact</a>
