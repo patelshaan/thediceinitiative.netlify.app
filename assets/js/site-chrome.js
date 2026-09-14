@@ -34,6 +34,17 @@ const menuButton = document.querySelector('.site-menu-button');
 const navigation = document.querySelector('.site-navigation');
 const dropdown = document.querySelector('.site-dropdown');
 const dropdownButton = document.querySelector('.site-dropdown-toggle');
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('.site-navigation a').forEach((link) => {
+  const linkPage = link.getAttribute('href').split('#')[0];
+  if (linkPage === currentPage) {
+    link.setAttribute('aria-current', 'page');
+    if (dropdown.contains(link)) {
+      dropdown.classList.add('has-current-page');
+    }
+  }
+});
 
 menuButton?.addEventListener('click', () => {
   const isOpen = navigation.classList.toggle('open');

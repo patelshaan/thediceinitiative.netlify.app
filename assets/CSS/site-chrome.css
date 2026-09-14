@@ -1,10 +1,18 @@
+:root {
+  --dice-sky: #68B4F4;
+  --dice-light-blue: #A0CCFC;
+  --dice-navy: #40547C;
+  --dice-charcoal: #2F3640;
+  --dice-page: #F7FAFC;
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
   width: 100%;
-  background-color: #68B4F4;
-  color: #2F3640;
+  background-color: var(--dice-sky);
+  color: var(--dice-charcoal);
 }
 
 .site-header-inner {
@@ -18,7 +26,7 @@
 }
 
 .site-brand {
-  color: #2F3640;
+  color: var(--dice-charcoal);
   font-family: 'Poppins', sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
@@ -36,14 +44,47 @@
 
 .site-navigation a,
 .site-dropdown-toggle {
-  color: #2F3640;
+  position: relative;
+  color: var(--dice-charcoal);
+  line-height: 1.5;
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus-visible,
 .site-dropdown-toggle:hover,
 .site-dropdown-toggle:focus-visible {
-  color: #fff;
+  color: var(--dice-navy);
+}
+
+.site-navigation a::after,
+.site-dropdown-toggle::before {
+  position: absolute;
+  right: 0;
+  bottom: -0.45rem;
+  left: 0;
+  height: 2px;
+  background-color: var(--dice-navy);
+  content: '';
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.site-navigation a:hover::after,
+.site-navigation a:focus-visible::after,
+.site-navigation a[aria-current='page']::after,
+.site-dropdown.has-current-page .site-dropdown-toggle::before,
+.site-dropdown-toggle:hover::before,
+.site-dropdown-toggle:focus-visible::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.site-navigation a:focus-visible,
+.site-dropdown-toggle:focus-visible,
+.site-menu-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 .site-dropdown {
@@ -88,13 +129,13 @@
 
 .site-dropdown-menu a {
   padding: 0.65rem 0.75rem;
-  color: #2F3640;
+  color: var(--dice-charcoal);
 }
 
 .site-dropdown-menu a:hover,
 .site-dropdown-menu a:focus-visible {
-  color: #40547C;
-  background-color: #A0CCFC;
+  color: var(--dice-navy);
+  background-color: var(--dice-light-blue);
 }
 
 .site-menu-button {
@@ -102,7 +143,7 @@
   padding: 0.5rem;
   border: 0;
   background: transparent;
-  color: #2F3640;
+  color: var(--dice-charcoal);
   cursor: pointer;
 }
 
@@ -139,8 +180,8 @@ body footer.site-footer {
   margin: 0;
   padding: 1.25rem 1rem;
   border: 0;
-  background-color: #68B4F4;
-  color: #40547C;
+  background-color: var(--dice-sky);
+  color: var(--dice-navy);
   font-family: 'Poppins', sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
@@ -170,7 +211,7 @@ body footer.site-footer p {
     align-items: stretch;
     gap: 0;
     padding: 0.5rem 1rem 1rem;
-    background-color: #68B4F4;
+    background-color: var(--dice-sky);
   }
 
   .site-navigation.open {
