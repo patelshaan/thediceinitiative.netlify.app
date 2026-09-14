@@ -48,6 +48,14 @@
   object-fit: contain;
 }
 
+.partner-entry--pending {
+  min-height: 220px;
+}
+
+.partner-entry--pending .sponsor-logo-frame {
+  min-height: 180px;
+}
+
 .sponsor-entry h2,
 .partner-entry h2 {
   margin: 0 0 1rem;
